@@ -4,8 +4,8 @@ from supermarket.utils import math
 from ..items import SupermarketItem
 
 
-class ContinenteSpider(scrapy.Spider):
-    name = "continente"
+class ContinenteSampleSpider(scrapy.Spider):
+    name = "continentesample"
     start_urls = {
         'https://www.continente.pt/stores/continente/pt-pt/public/Pages/subcategory.aspx?cat=animais-gato-racao-esteril#/?pl=100'
     }

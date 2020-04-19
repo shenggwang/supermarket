@@ -2,8 +2,9 @@ import scrapy
 
 from ..items import SupermarketItem
 
-class AuchanSpider(scrapy.Spider):
-    name = "auchan"
+
+class AuchanSampleSpider(scrapy.Spider):
+    name = "auchansample"
     # pagination 15 - 90
     start_urls = {
         'https://www.auchan.pt/Frontoffice/animais/gato/racao_para_gatos'
