@@ -9,9 +9,9 @@ import scrapy
 
 
 class SupermarketItem(scrapy.Item):
-    image = scrapy.Field()
+    image_url = scrapy.Field()
     name = scrapy.Field()
-    type = scrapy.Field()
+    brand = scrapy.Field()
     subtitle = scrapy.Field()
     price_now = scrapy.Field()
     price_before = scrapy.Field()

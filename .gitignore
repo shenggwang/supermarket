@@ -131,3 +131,9 @@ dmypy.json
 #idea
 .idea
 *.idea
+
+# output
+results/
+*.csv
+*.json
+*.xml
