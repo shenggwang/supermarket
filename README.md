@@ -14,12 +14,12 @@ Enter the virtual environment.
 ### Execute
 ```
 (venv) cd supermarket
-(venv) scrapy crawl continente
+(venv) scrapy crawl continentesample
 ```
 ### Save to a csv file
 ```
 (venv) cd supermarket
-(venv) scrapy crawl continente -o results/continente.csv
+(venv) scrapy crawl continentesample -o results/continentesample.csv
 ```
 ## Supermarket
 
@@ -38,10 +38,12 @@ Note: There are more. Below are supermarkets that just came to my head at writin
 ### The list below are supermarkets that provide online shopping (the project's focuses)  
 
 - [x] [Auchan](https://www.auchan.pt/)
-- [x] [Continente](https://www.continente.pt/)
-- [ ] [ElCorteInglés](https://www.elcorteingles.pt/supermercado/)
-- [ ] [Intermarche](https://lojaonline.intermarche.pt/)
+- [x] [Continente](https://www.continente.pt/stores/continente/pt-pt/public/Pages/homepage.aspx)
+- [x] [ElCorteInglés](https://www.elcorteingles.pt/supermercado/)
 
+### The list below are supermarkets that provide online shopping but you have to bring up yourself  
+
+- [ ] [Intermarche](https://lojaonline.intermarche.pt/)
 
 ### The list below are supermarkets that DOES NOT provide online shopping (we won't focus on these)  
 
