@@ -1,4 +1,6 @@
 import scrapy
+
+import supermarket.utils.math
 from ..items import SupermarketItem
 
 
@@ -17,14 +19,13 @@ class ContinenteSpider(scrapy.Spider):
             items['subtitle'] = item.css('.subTitle::text').extract()[0].strip()
             prices = item.css('.priceFirstRow::text').extract()
             if len(prices) > 1:
-                items['price_now'] = prices[0]
-                items['price_before'] = prices[1]
-
                 now = float(prices[0].strip('€ ').replace(',', '.'))
                 before = float(prices[1].strip('€ ').replace(',', '.'))
-                items['discount'] = str(int(-((now * 100 / before) - 100))) + '%'
+                items['price_now'] = now
+                items['price_before'] = before
+                items['discount'] = math.getPercentage(now, before)
             else:
-                items['price_now'] = prices[0]
-                items['price_before'] = prices[0]
-                items['discount'] = '0%'
+                items['price_now'] = float(prices[0].strip('€ ').replace(',', '.'))
+                items['price_before'] = float(prices[0].strip('€ ').replace(',', '.'))
+                items['discount'] = 0
             yield items
